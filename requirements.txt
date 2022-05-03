@@ -1,0 +1,2 @@
+requests>=2.27.1
+requests-html>=0.10.0
