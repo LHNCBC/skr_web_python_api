@@ -1,6 +1,6 @@
 # Description
 
-This Python-based API to the Indexing Initiative Scheduler facility
+This Python-based API for the Indexing Initiative Scheduler facility
 was created to provide users with the ability to programmatically
 submit jobs to the Scheduler Batch and Interactive facilities instead
 of using the web-based interface.
@@ -50,7 +50,9 @@ to be processed by SemRep:
     >>> inst.set_batch_file(inputfilename)
     >>> response = inst.submit()
     >>> print('response status: {}'.format(response.status_code))
+    response status: 200
     >>> print('content: {}'.format(response.content))
+	... output omitted ...
 
 ## Interactive Example
 
@@ -85,8 +87,9 @@ An example of processing a string using interactive MetaMap service:
 
 ### Generic Batch Example
 
-The Python source file __generic_batch_file.py__ contains source for
-example of submitting file to generic batch with validation.
+The Python source file __generic_batch_file.py__, in the __examples__
+directory, contains source for example of submitting file to generic
+batch with validation.
 
 Usage:
 
@@ -95,21 +98,24 @@ Usage:
 
 Example of use:
 
-    python generic_batch_file.py --email user@host -a 5e53f \
+    python examples/generic_batch_file.py --email user@host -a 5e53f \
     ~/queries/iiquery
 
 
-### Interactive examples
+### Interactive example sources
 
+
+The directory __examples__ also contains examples of using the
+MetaMap, MTI, and SemRep interactive services.
 
 MetaMap:
 
-    python mm_interactive.py -e $EMAIL -a $UTS_API_KEY
+    python examples/mm_interactive.py -e $EMAIL -a $UTS_API_KEY
 
 MTI:
 
-    python mti_interactive.py -e $EMAIL -a $UTS_API_KEY
+    python examples/mti_interactive.py -e $EMAIL -a $UTS_API_KEY
 
 SemRep:
 
-    python sr_interactive.py -e $EMAIL -a $UTS_API_KEY
+    python examples/sr_interactive.py -e $EMAIL -a $UTS_API_KEY
