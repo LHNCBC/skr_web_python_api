@@ -1,4 +1,4 @@
-# Description
+# Indexing Initiative Wed API 
 
 This Python-based API for the Indexing Initiative Scheduler facility
 was created to provide users with the ability to programmatically
@@ -13,17 +13,32 @@ strings, accurate identification of the terminology and relationships
 in anatomical documents, and the extraction of chemical binding
 relations from biomedical text.
 
+See Indexing Initiative's Web API page
+(https://ii.nlm.nih.gov/Web_API/index.shtml) for more information.
+
 # Prerequisites
 
-The SKR Web API requires at least Python 3.8 and two packages:
-Requests and Requests-HTML to run.  It's possible that it will work
-with earlier versions of Python 3 but that hasn't been tested.
++ To access either the the Interactive Mode or Batch Mode facilities,
+  you must have accepted the terms of the
+  [UMLS Metathesaurus License Agreement]
+  (https://uts.nlm.nih.gov/license.html), which requires you to
+  respect the copyrights of the constituent vocabularies and to file a
+  brief annual report on your use of the UMLS. You also must have
+  activated a [UMLS Terminology Services (UTS) account]
+  (https://uts.nlm.nih.gov/home.html). See
+  [UTS Account Information page]
+  (http://skr.nlm.nih.gov/Help/umlsks.shtml) for information on how we
+  use UTS authentication.
+
++ The SKR Web API requires at least Python 3.8 and two packages:
+  Requests and Requests-HTML to run.  It's possible that it will work
+  with earlier versions of Python 3 but that hasn't been tested.
+
+# Building and Installing the API
 
 Installing prequisites using pip:
 
     python3 -m pip install requests requests-html
-
-# Building and Installing the API
 
 Building the wheel package from sources:
 
@@ -31,9 +46,9 @@ Building the wheel package from sources:
     python3 -m pip install --upgrade build
     python3 -m build --no-isolation
 
-Installing using wheel:
+Installing the wheel package into your virtual environment:
 
-    python -m pip install dist/skr_web_api-0.1-py3-none-any.whl
+    python3 -m pip install dist/skr_web_api-0.1-py3-none-any.whl
 
 # Usage
 
@@ -98,7 +113,7 @@ Usage:
 
 Example of use:
 
-    python examples/generic_batch_file.py --email user@host -a 5e53f \
+    python examples/generic_batch_file.py -e user@host -a 1234-5678-9ABC-DEF1 \
     ~/queries/iiquery
 
 
