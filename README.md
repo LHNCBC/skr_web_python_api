@@ -1,4 +1,4 @@
-# Indexing Initiative Wed API 
+# Indexing Initiative Web API: Python Implementation
 
 This Python-based API for the Indexing Initiative Scheduler facility
 was created to provide users with the ability to programmatically
