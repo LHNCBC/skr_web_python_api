@@ -31,8 +31,10 @@ See Indexing Initiative's Web API page
   use UTS authentication.
 
 + The SKR Web API requires at least Python 3.8 and two packages:
-  Requests and Requests-HTML to run.  It's possible that it will work
-  with earlier versions of Python 3 but that hasn't been tested.
+  Requests (https://docs.python-requests.org/en/latest/) and
+  Requests-HTML (https://github.com/psf/requests-html) to run.  It's
+  possible that it will work with earlier versions of Python 3 but
+  that hasn't been tested.
 
 # Building and Installing the API
 
