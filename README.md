@@ -54,13 +54,16 @@ Installing the wheel package into your virtual environment:
 
 # Usage
 
+To run the examples, you'll need a UTS API key which available in your
+UTS profile.
+
 ## A Simple Batch Example
 
 A simple example of submitting file to generic batch with validation
 to be processed by SemRep:
 
     >>> email = 'username@address'
-    >>> apikey = somehexvalue
+    >>> apikey = '<UTS apikey>'
     >>> inputfilename = 'doc.txt'
     >>> inst = Submission(email, apikey)
     >>> inst.init_generic_batch("semrep", "-D")
@@ -76,7 +79,7 @@ to be processed by SemRep:
 An example of processing a string using interactive MetaMap service:
 
     >>> email = 'username@address'
-    >>> apikey = somehexvalue
+    >>> apikey = '<UTS apikey>'
     >>> inputfilename = 'doc.txt'
     >>> inst = Submission(email, apikey)
 	>>> inputtext = "A spinal tap was performed and oligoclonal bands were \
