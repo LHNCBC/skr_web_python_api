@@ -44,6 +44,7 @@ Installing prequisites using pip:
 
 Building the wheel package from sources:
 
+    python3 -m pip install wheel
     python3 -m pip install --upgrade pip
     python3 -m pip install --upgrade build
     python3 -m build --no-isolation
