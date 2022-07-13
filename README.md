@@ -38,20 +38,28 @@ See Indexing Initiative's Web API page
 
 # Building and Installing the API
 
-Installing prequisites using pip:
+Installing prerequisites using pip:
 
     python3 -m pip install requests requests-html
-
-Building the wheel package from sources:
-
     python3 -m pip install wheel
     python3 -m pip install --upgrade pip
     python3 -m pip install --upgrade build
-    python3 -m build --no-isolation
+
+Building the wheel package from sources after cloning the repository:
+
+	git clone https://github.com/lhncbc/skr_web_python_api.git
+	cd skr_web_python_api
+    python3 -m build
 
 Installing the wheel package into your virtual environment:
 
     python3 -m pip install dist/skr_web_api-0.1-py3-none-any.whl
+
+Note: If you don't have write access to the installed Python then you
+may need to use virtual environment created using venv
+(https://docs.python.org/3/library/venv.html) or Miniconda
+(https://docs.conda.io/en/latest/miniconda.html).
+
 
 # Usage
 
