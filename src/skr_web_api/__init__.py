@@ -41,7 +41,7 @@ class Submission:
 
     def init_generic_batch(self,  command, command_args):
         self.serviceurl = BATCH_VALIDATION_URL
-        self.form["Batch_Command"] = '{} {}'.format(command, args)
+        self.form["Batch_Command"] = '{} {}'.format(command, command_args)
         self.form['COMMAND_ARGS'] = command_args
         self.form['RUN_PROG'] = 'GENERIC_V'
         self.form['SKR_API'] = 'true'
@@ -49,20 +49,17 @@ class Submission:
     def init_sr_interactive(self, inputtext, args='-D'):
         self.serviceurl = SEMREP_INTERACTIVE_URL
         self.form['APIText'] = inputtext
-        self.form["Batch_Command"] = '{} {}'.format(command, args)
         self.form['COMMAND_ARGS'] = args
 
     def init_mm_interactive(self, inputtext, args='-N', ksource='2020AB'):
         self.serviceurl = METAMAP_INTERACTIVE_URL
         self.form['APIText'] = inputtext
-        self.form["Batch_Command"] = '{} {}'.format(command, args)
         self.form['COMMAND_ARGS'] = args
         self.form['KSOURCE'] = ksource
 
     def init_mti_interactive(self, inputtext, args='-opt1L_DCMS'):
         self.serviceurl = MTI_INTERACTIVE_URL
         self.form['APIText'] = inputtext
-        self.form["Batch_Command"] = '{} {}'.format(command, args)
         self.form['COMMAND_ARGS'] = args
 
     def set_mm_ksource(self, ksrelease):
@@ -71,7 +68,8 @@ class Submission:
 
     def set_command_args(self, args):
         """set arguments for command """
-        self.form["Batch_Command"] = '{} {}'.format(command, args)
+        self.form["Batch_Command"] = '{} {}'.format(
+            self.form["Batch_Command"], args)
         self.form['COMMAND_ARGS'] = args
 
     def set_batch_file(self, inputfilename, inputtext=None):
